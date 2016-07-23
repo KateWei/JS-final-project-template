@@ -75,12 +75,15 @@ function draw(){
 	ctx.drawImage(heroImg,hero.x,hero.y);
 	ctx.drawImage(ctImg,540,380,100,100);
 	ctx.drawImage(slimeImg, enemy.x, enemy.y);
+	
 	if(isBuilding == true){
 		ctx.drawImage(towerImg,cursor.x,cursor.y);
 	}
 	else{
 		ctx.drawImage(towerImg,tower.x,tower.y);
 	}
+	enemy.move();
+	ctx
 }
 
 // 等待一秒再執行 draw
