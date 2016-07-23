@@ -1,14 +1,3 @@
-var bgImg = document.createElement("img");
-bgImg.src = "images/map.png";
-var hero = document.createElement("img");
-hero.src = "https://github.com/KateWei/jsGameByOa/blob/gh-pages/images/daigh.gif?raw=true";
-var canvas = document.getElementById("game");
-var ctx = canvas.getContext("2d");
-
-function draw(){
-  ctx.drawImage(bgImg,0,0);
-}
-setTimeout(draw,1000)
 
 // 創造 img HTML 元素，並放入變數中
 var bgImg = document.createElement("img");
@@ -68,6 +57,17 @@ $("#game").click(function(event){
 	}
 });
 
+var enemy = {
+	x: 96,
+	y: 480-32,
+	speed: 64,
+	derection: {x: o, y: -13,
+	move: function(){
+		this.x = this.x + this.direction.x*this.speed/FPS;
+		this.y = this.y + this.direction.y*this.speed/FPS;
+	}
+}
+
 function draw(){
 	// 將背景圖片畫在 canvas 上的 (0,0) 位置
 	ctx.drawImage(bgImg,0,0);
@@ -81,18 +81,6 @@ function draw(){
 		ctx.drawImage(towerImg,tower.x,tower.y);
 	}
 }
-
-var enemy = {
-	x: 96,
-	y: 480-32,
-	speed: 64,
-	derection: {x: o, y: -13,
-	move: function(){
-		this.x = this.x + this.direction.x*this.speed/FPS;
-		this.y = this.y + this.direction.y*this.speed/FPS;
-	}
-}
-
 
 // 等待一秒再執行 draw
 setInterval( draw, 16);
