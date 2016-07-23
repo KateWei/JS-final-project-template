@@ -1,3 +1,4 @@
+var FPS = 60;
 
 // 創造 img HTML 元素，並放入變數中
 var bgImg = document.createElement("img");
@@ -83,4 +84,4 @@ function draw(){
 }
 
 // 等待一秒再執行 draw
-setInterval( draw, 16);
+setInterval(1000/FPS);
