@@ -79,7 +79,7 @@ function draw(){
 	}
 	else{
 		ctx.drawImage(towerImg,tower.x,tower.y);
-	}
+	}}
 
 // 等待一秒再執行 draw
 setInterval( draw, 16);
