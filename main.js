@@ -15,6 +15,7 @@ var bgImg = document.createElement("img");
 
 // 設定這個元素的要顯示的圖片
 bgImg.src = "images/map.png";
+bgImg.src = "slime.gif";
 
 var hero = {
     x: 0,
