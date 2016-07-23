@@ -73,7 +73,7 @@ function draw(){
 	ctx.drawImage(bgImg,0,0);
 	ctx.drawImage(heroImg,hero.x,hero.y);
 	ctx.drawImage(ctImg,540,380,100,100);
-	ctx.drawImage(slimeImg, slime.x, slime.y);
+	ctx.drawImage(slimeImg, enemy.x, enemy.y);
 	if(isBuilding == true){
 		ctx.drawImage(towerImg,cursor.x,cursor.y);
 	}
