@@ -20,6 +20,11 @@ var hero = {
     x: 0,
     y: 0
 };
+
+var enemy = {
+    x: 96,
+    y: 448
+}
 var heroImg = document.createElement("img");
 heroImg.src = "images/rukia.gif";
 
