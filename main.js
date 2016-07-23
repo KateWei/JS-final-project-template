@@ -15,17 +15,12 @@ var bgImg = document.createElement("img");
 
 // 設定這個元素的要顯示的圖片
 bgImg.src = "images/map.png";
-bgImg.src = "slime.gif";
 
 var hero = {
     x: 0,
     y: 0
 };
 
-var enemy = {
-    x: 96,
-    y: 448
-}
 var heroImg = document.createElement("img");
 heroImg.src = "images/rukia.gif";
 
@@ -34,6 +29,10 @@ ctImg.src = "images/tower-btn.png";
 
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
+
+var enemyImg = document.createElement("img");
+enemyImg.src = "slime.gif";
+
 
 // 找出網頁中的 canvas 元素
 var canvas = document.getElementById("game");
