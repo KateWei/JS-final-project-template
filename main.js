@@ -79,7 +79,20 @@ function draw(){
 	}
 	else{
 		ctx.drawImage(towerImg,tower.x,tower.y);
-	}}
+	}
+}
+
+var enemy = {
+	x: 96,
+	y: 480-32,
+	speed: 64,
+	derection: {x: o, y: -13,
+	move: function(){
+		this.x = this.x + this.direction.x*this.speed/FPS;
+		this.y = this.y + this.direction.x*this.speed/FPS;
+	}
+}
+
 
 // 等待一秒再執行 draw
 setInterval( draw, 16);
