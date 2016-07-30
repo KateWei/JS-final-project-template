@@ -86,6 +86,18 @@ var enemyPath = [
    {x: 384, y: 64},
    
 	];
+	
+function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight){
+	if( pointX >= targetX
+	&& pointX <= targetX + targetWidth
+	&& pointY >= targetY
+	&& pointY <= trgetY + targetWidth
+        ){
+	    return true;
+	}else{
+		return false;
+	}
+}
 
 // 等待一秒再執行 draw
 setInterval(draw,1000/FPS);
