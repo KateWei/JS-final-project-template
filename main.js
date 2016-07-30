@@ -67,7 +67,7 @@ var enemy = {
 		this.x = this.x + this.direction.x*this.speed/FPS;
 		this.y = this.y + this.direction.y*this.speed/FPS;
 	}
-}
+};
 
 function draw(){
 	// 將背景圖片畫在 canvas 上的 (0,0) 位置
@@ -84,5 +84,11 @@ function draw(){
 	}
 	enemy.move();
 }
+
+var nenemyPath = [
+   {x: 96, y: 64}
+   
+	];
+
 // 等待一秒再執行 draw
 setInterval(1000/FPS);
