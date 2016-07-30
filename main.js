@@ -11,7 +11,7 @@ var hero = {
     y: 0
 };
 
-varSlimeImg = document.createElement("img")
+varSlimeGif = document.createElement("img")
 slimeImg.src = "images/slime.gif"
 
 var heroImg = document.createElement("img");
