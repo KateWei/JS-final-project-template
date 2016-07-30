@@ -83,8 +83,12 @@ function draw(){
 		ctx.drawImage(towerImg,tower.x,tower.y);
 	}
 	enemy.move();
-	ctx
 }
+
+var nenemyPath = [
+   {x: 96, y: 64}
+   
+	];
 
 // 等待一秒再執行 draw
 setInterval(1000/FPS);
