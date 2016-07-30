@@ -58,15 +58,43 @@ var enemy = {
 	x: 96,
 	y: 480-32,
 	speed: 64,
+	pathDes: 0,
 	direction: {x: 0, y: -1},
 	move: function(){
+		if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x,this.y, this.speed/FPS,this.speed/FPS,)){
+			enemyPath[this.pathDes].x; 
+			enemyPath[this.pathDes].y;
+			this.pathDes += 1;
+			if(enemyPath[this.pathDes].x < this.x){
+				this.direction = {x: 1, y: 0};
+			}else if{
+			if(enemyPath[this.pathDes].x > this.x){
+				this.direction = {x: 1, y: 0};
+			}
+			}else if{
+			if(enemyPath[this.pathDes]yx > this.y){
+				this.direction = {x: 0, y: -1};
+			}
+			}else if{
+			if(enemyPath[this.pathDes].y < this.y){
+				this.direction = {x: 0, y: -1};
+			}
+			}
+		
+		}
+		else{
+		
 		this.x = this.x + this.direction.x*this.speed/FPS;
 		this.y = this.y + this.direction.y*this.speed/FPS;
+		}
 	}
 };
 
 function draw(){
 	// 將背景圖片畫在 canvas 上的 (0,0) 位置
+	
+	enemy.pathDes = 0;
+	
 	ctx.drawImage(bgImg,0,0);
 	ctx.drawImage(heroImg,hero.x,hero.y);
 	ctx.drawImage(ctImg,540,380,100,100);
