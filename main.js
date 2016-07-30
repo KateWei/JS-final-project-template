@@ -12,7 +12,7 @@ var hero = {
 };
 
 var SlimeImg = document.createElement("img");
-slimeImg.src = "images/slime.gif"
+slimeImg.src = "images/slime.gif";
 
 var heroImg = document.createElement("img");
 heroImg.src = "images/rukia.gif";
