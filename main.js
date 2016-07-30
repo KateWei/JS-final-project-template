@@ -11,10 +11,6 @@ var hero = {
     y: 0
 };
 
-var enemy = {
-    x: 96,
-    y: 448-32
-}
 varSlimeImg = document.createElement("img")
 slimeImg.src = "images/slime.gif"
 
@@ -62,7 +58,7 @@ var enemy = {
 	x: 96,
 	y: 480-32,
 	speed: 64,
-	derection: {x: o, y: -13,
+	derection: {x: 0, y: -1,
 	move: function(){
 		this.x = this.x + this.direction.x*this.speed/FPS;
 		this.y = this.y + this.direction.y*this.speed/FPS;
