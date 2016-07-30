@@ -84,11 +84,5 @@ function draw(){
 	}
 	enemy.move();
 }
-
-var nenemyPath = [
-   {x: 96, y: 64}
-   
-	];
-
 // 等待一秒再執行 draw
 setInterval(1000/FPS);
