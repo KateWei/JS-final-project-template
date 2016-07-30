@@ -12,7 +12,7 @@ var hero = {
 };
 
 varSlimeImg = document.createElement("img")
-slimeImg.src = "images/slime.gif"
+slimeImg.src = "https://github.com/KateWei/jsGameByOa/blob/gh-pages/images/slime.gif?raw=true"
 
 var heroImg = document.createElement("img");
 heroImg.src = "images/rukia.gif";
