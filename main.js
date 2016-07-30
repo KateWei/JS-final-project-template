@@ -88,4 +88,4 @@ var enemyPath = [
 	];
 
 // 等待一秒再執行 draw
-setInterval(1000/FPS);
+setInterval(draw,1000/FPS);
