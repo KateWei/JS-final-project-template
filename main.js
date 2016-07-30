@@ -82,7 +82,8 @@ function draw(){
 }
 
 var nenemyPath = [
-   {x: 96, y: 64}
+   {x: 96, y: 64},
+   {x: 384, y: 64},
    
 	];
 
