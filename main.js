@@ -95,11 +95,6 @@ $("#game").mousemove(function(event){
 	cursor.y = event.offsetY;
 });
 
-var tower = {
-	x:0,
-	y:0
-};
-
 var isBuilding = false;
 $("#game").click(function(event){
 	if (event.offsetX > 540 && event.offsetY > 380){
@@ -113,6 +108,26 @@ $("#game").click(function(event){
 		isBuilding = false;
 	}
 });
+
+var tower = {
+        	x:0,
+	        y:0,
+        	range: 96,
+        	aimingEnemyId: null,
+        	searchEnemy: function(){
+        		for(var i = 0; i<enemies.length; i++){
+        			var distance = Math.sqrt(
+        				Math.pow(this.x-enemies[1].x,2) + Math.pow(this.y-enemies[1].y,2)
+        	        );
+        	        if(distance <= this.range){
+        	        	this.aimingEnemyId = i;
+        	        	return;
+        	        }
+        	}
+        	//如果都沒找到，會進道這行，清除鎖定的目標
+        	this.imingEnemyId = null;
+        	}
+        };
 
 function draw(){
 	if(clock % 80 == 0){
@@ -137,12 +152,14 @@ function draw(){
 		ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y);	
 	}
 	clock++;
+        
+        ctx.font = "24px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("TreeHP",10,10);
+
 }
 
 // 等待一秒再執行 draw
 setInterval( draw, 1000/FPS);
 
 var hp = 100
-ctx.font = "24px Arial";
-ctx.fillStyle = "white";
-ctx.fillText("TreeHP",10,10);
