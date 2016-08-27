@@ -139,6 +139,8 @@ function draw(){
 // 等待一秒再執行 draw
 setInterval( draw, 1000/FPS);
 
+
+var hp = 100
 ctx.font = "24px Arial";
 ctx.fillStyle = "white";
 ctx.fillText("TreeHP",0,0);
