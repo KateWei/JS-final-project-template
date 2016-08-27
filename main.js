@@ -159,14 +159,15 @@ function draw(){
 	}
 }
 	clock++;
-        
+        var hp = 100
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
         ctx.fillText("TreeHP",15,15);
 
 }
 
+var crosshairImg = document.createElement("img");
+crossghairImg =
+
 // 等待一秒再執行 draw
 setInterval( draw, 1000/FPS);
-
-var hp = 100
