@@ -157,6 +157,7 @@ function draw(){
 		enemies[i].move();
 		ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y);	
 	}
+}
 	clock++;
         
         ctx.font = "24px Arial";
@@ -169,4 +170,3 @@ function draw(){
 setInterval( draw, 1000/FPS);
 
 var hp = 100
-}
