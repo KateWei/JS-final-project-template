@@ -141,4 +141,4 @@ setInterval( draw, 1000/FPS);
 
 ctx.font = "24px Arial";
 ctx.fillStyle = "white";
-ctx.fillText("TreeHP",100,100);
+ctx.fillText("TreeHP",0,0);
