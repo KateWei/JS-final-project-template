@@ -169,3 +169,4 @@ function draw(){
 setInterval( draw, 1000/FPS);
 
 var hp = 100
+}
