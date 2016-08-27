@@ -130,6 +130,9 @@ function draw(){
 		ctx.drawImage(towerImg,tower.x,tower.y);
 	}
 	for(var i = 0; i < enemies.length; i++){
+            if(inemies[1].hp <= 0){
+            	enemies.splice(i,1)
+            }else{
 		enemies[i].move();
 		ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y);	
 	}
@@ -138,7 +141,6 @@ function draw(){
 
 // 等待一秒再執行 draw
 setInterval( draw, 1000/FPS);
-
 
 var hp = 100
 ctx.font = "24px Arial";
