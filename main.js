@@ -40,20 +40,6 @@ var tower = {
 	y:0
 };
 
-var isBuilding = false;
-$("#game").click(function(event){
-	if (event.offsetX > 540 && event.offsetY > 380){
-		isBuilding = true;
-	}
-	else{
-		if(isBuilding == true){
-			tower.x = cursor.x - cursor.x % 32;
-			tower.y = cursor.y - cursor.y % 32;
-		}
-		isBuilding = false;
-	}
-});
-
 var enemy = {
 	x: 96,
 	y: 480-32,
@@ -146,29 +132,6 @@ var hero = {
     y: 0
 };
 
-function isCollided ( pointX, pointY, targetX, targetY, targetWidth, targetHeight ) {
-if(     pointX >= targetX
-        &&  pointX <= targetX + targetWidth
-        &&  pointY >= targetY
-        &&  pointY <= targetY + targetHeight
-){
-        return true;
-} else {
-        return false;
-}
-}
-
-
-var enemyPath = [
-    {x:96, y:64},
-    {x:384, y:64},
-    {x:384, y:192},
-    {x:224, y:192},
-    {x:224, y:320},
-    {x:544, y:320},
-    {x:544, y:96}
-];
-
 function Enemy(){
     this.x = 32*3;
     this.y = 480 - 32;
@@ -204,18 +167,6 @@ function Enemy(){
 }
 
 var enemies = [];
-
-var heroImg = document.createElement("img");
-heroImg.src = "images/rukia.gif";
-
-var ctImg = document.createElement("img");
-ctImg.src = "images/tower-btn.png";
-
-var towerImg = document.createElement("img");
-towerImg.src = "images/tower.png";
-
-var enemyImg = document.createElement("img");
-enemyImg.src = "images/slime.gif";
 
 // 找出網頁中的 canvas 元素
 var canvas = document.getElementById("game");
