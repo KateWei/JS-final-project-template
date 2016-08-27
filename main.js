@@ -162,7 +162,7 @@ function draw(){
         
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("TreeHP",10,10);
+        ctx.fillText("TreeHP",5,5);
 
 }
 
