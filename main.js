@@ -36,6 +36,7 @@ var enemyPath = [
 ];
 
 function Enemy(){
+    this.hp=0;
     this.x = 32*3;
     this.y = 480 - 32;
     this.speed = 64;
@@ -48,6 +49,11 @@ function Enemy(){
     		this.y = enemyPath[this.pathDes].y;
     		//找出下一個路徑點
     		this.pathDes += 1;
+    		if(this.pathDes >= enemyPath.length){
+    			this.hp=0;
+    			treeHP -= 10;
+    			return;
+    		}
     		//算出方向，修改方向
     		if(enemyPath[this.pathDes].x > this.x){
     			this.direction = {x:1, y:0};
