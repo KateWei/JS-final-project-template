@@ -1,5 +1,9 @@
 var clock = 0;
 var FPS = 60;
+ctx.fillText("TreeHP",100,100);
+ctx.font = "24px Arial";
+ctx.fillStyle = "white";
+ctx.fillText("TreeHP",100,100);
 // 創造 img HTML 元素，並放入變數中
 var bgImg = document.createElement("img");
 
