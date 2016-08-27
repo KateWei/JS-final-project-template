@@ -130,7 +130,7 @@ function draw(){
 		ctx.drawImage(towerImg,tower.x,tower.y);
 	}
 	for(var i = 0; i < enemies.length; i++){
-            if(inemies[1].hp <= 0){
+            if(enemies[1].hp <= 0){
             	enemies.splice(i,1)
             }else{
 		enemies[i].move();
