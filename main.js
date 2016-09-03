@@ -150,6 +150,7 @@ var tower = {
                 }
         	//如果都沒找到，會進道這行，清除鎖定的目標
         	this.imingEnemyId = null;,
+          }
         };
 
 function draw(){
