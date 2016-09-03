@@ -120,6 +120,10 @@ var tower = {
 	        y:0,
         	range: 96,
         	aimingEnemyId: null,
+        	shoot: function(){}
+        	fireRate: 1,
+        	readyToShootTime: 1,
+        	damage: 5,
         	searchEnemy: function(){
         		for(var i = 0; i<enemies.length; i++){
         			var distance = Math.sqrt(
