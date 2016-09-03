@@ -120,7 +120,7 @@ var tower = {
 	        y:0,
         	range: 96,
         	aimingEnemyId: null,
-        	shoot: function(){};
+        	shoot: function(){}};
         	fireRate: 1,
         	readyToShootTime: 1,
         	damage: 5;
