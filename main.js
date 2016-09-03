@@ -129,7 +129,7 @@ var tower = {
         			var distance = Math.sqrt(
         				Math.pow(this.x-enemies[1].x,2) + Math.pow(this.y-enemies[1].y,2))
         	};
-        	shoot: function(id){
+        	shoot: function shoot(id){
         		ct.beginPath();
         		ctx.moveTo(this.x + 16, this.y);
         		ctx.lineTo(enemies[id].x + 16, enemies[id].y + 16);
