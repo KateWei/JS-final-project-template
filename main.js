@@ -188,7 +188,7 @@ function draw(){
         var money = 0;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("Money:"+money,5,95);
+        ctx.fillText("Money:"+money,5,100);
 
 }
 
