@@ -150,7 +150,8 @@ var tower = {
         		ctx.stroke();
         	        enemies[id].HP -= this.damage;
         	}
-          };
+          }
+	};
 
 function draw(){
 	if(clock % 80 == 0){
