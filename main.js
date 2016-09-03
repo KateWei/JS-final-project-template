@@ -140,7 +140,7 @@ var tower = {
 		        	//如果都沒找到，會進道這行，清除鎖定的目標
 		        	this.imingEnemyId = null;
                 		}
-                     	},
+                     	}
         	shoot: function hit(id){
         		ct.beginPath();
         		ctx.moveTo(this.x + 16, this.y);
