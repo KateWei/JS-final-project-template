@@ -160,6 +160,7 @@ function draw(){
 }
 	clock++;
         var hp = 100
+        alert(hp);
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
         ctx.fillText("TreeHP:",15,30);
