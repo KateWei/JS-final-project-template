@@ -124,19 +124,26 @@ var tower = {
         	fireRate: 1,
         	readyToShootTime: 1,
         	damage: 5,
-        	searchEnemy: function(){
-        		for(var i = 0; i<enemies.length; i++){
+                searchEnemy: function(){
+                	this.readyToShootTime -= 1/FPS;
+                	for(var i = 0; i<enemies.length; i++){
         			var distance = Math.sqrt(
         				Math.pow(this.x-enemies[1].x,2) + Math.pow(this.y-enemies[1].y,2)
-        	        );
+        	        };
         	        if(distance <= this.range){
         	        	this.aimingEnemyId = i;
+        	        	//判斷是否倒數完畢
+        	        	if(this.readyToShootTime <= 0){
+        	        		this.shoot();
+        	        		this.readyToShootTime = this.fireRate;
+        	        	}
         	        	return;
         	        }
-        	}
+                }
+             }
         	//如果都沒找到，會進道這行，清除鎖定的目標
         	this.imingEnemyId = null;
-        	}
+        	},
         };
 
 function draw(){
