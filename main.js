@@ -122,7 +122,7 @@ var tower = {
         	aimingEnemyId: null,
         	fireRate: 1,
         	readyToShootTime: 1,
-        	damage: 5;
+        	damage: 5,
                 searchEnemy: function(){
                 	this.readyToShootTime -= 1/FPS;
                 	for(var i = 0; i<enemies.length; i++){
