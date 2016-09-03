@@ -149,7 +149,7 @@ var tower = {
         		ctx.lineWidth = 3;
         		ctx.stroke();
         	        enemies[id].HP -= this.damage;
-        	},
+        	}
           };
 
 function draw(){
