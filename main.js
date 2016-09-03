@@ -120,7 +120,14 @@ var tower = {
 	        y:0,
         	range: 96,
         	aimingEnemyId: null,
-        	shoot: function(){}};
+        	shoot: function(){
+        		ct.beginPath();
+        		ctx.moveTo();
+        		ctx.lineTo();
+        		ctx.strokeStyle = "red";
+        		ctx.lineWidth = 3;
+        		ctx.stroke();
+        	};
         	fireRate: 1,
         	readyToShootTime: 1,
         	damage: 5;
