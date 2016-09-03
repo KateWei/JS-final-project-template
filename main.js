@@ -180,15 +180,15 @@ function draw(){
         var hp = 100;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("TreeHP: "+hp,15,30);
+        ctx.fillText("TreeHP:"+hp,15,30);
         var score = 0;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("Score: "+score,10,60);
+        ctx.fillText("Score:"+score,10,60);
         var money = 0;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("Money: "+money,5,90);
+        ctx.fillText("Money:"+money,5,90);
 
 }
 
