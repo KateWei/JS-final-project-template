@@ -120,14 +120,6 @@ var tower = {
 	        y:0,
         	range: 96,
         	aimingEnemyId: null,
-        	shoot: function(){
-        		ct.beginPath();
-        		ctx.moveTo();
-        		ctx.lineTo();
-        		ctx.strokeStyle = "red";
-        		ctx.lineWidth = 3;
-        		ctx.stroke();
-        	};
         	fireRate: 1,
         	readyToShootTime: 1,
         	damage: 5;
@@ -137,6 +129,15 @@ var tower = {
         			var distance = Math.sqrt(
         				Math.pow(this.x-enemies[1].x,2) + Math.pow(this.y-enemies[1].y,2)
         	        };
+        	shoot: function(id){
+        		ct.beginPath();
+        		ctx.moveTo(this.x + 16, this.y);
+        		ctx.lineTo(enemies[id].x + 16, enemies[id].y + 16);
+        		ctx.strokeStyle = "red";
+        		ctx.lineWidth = 3;
+        		ctx.stroke();
+        	        enemies[id].HP -= this.damage;
+        	};
         	        if(distance <= this.range){
         	        	this.aimingEnemyId = i;
         	        	//判斷是否倒數完畢
