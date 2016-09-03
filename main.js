@@ -120,9 +120,9 @@ var tower = {
 	        y:0,
         	range: 96,
         	aimingEnemyId: null,
-        	shoot: function(){}
-        	fireRate: 1;
-        	readyToShootTime: 1;
+        	shoot: function(){};
+        	fireRate: 1,
+        	readyToShootTime: 1,
         	damage: 5;
                 searchEnemy: function(){
                 	this.readyToShootTime -= 1/FPS;
