@@ -184,11 +184,11 @@ function draw(){
         var score = 0;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("Score:"+score,10,60);
+        ctx.fillText("Score:"+score,10,30);
         var money = 0;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("Money:"+money,5,90);
+        ctx.fillText("Money:"+money,5,30);
 
 }
 
