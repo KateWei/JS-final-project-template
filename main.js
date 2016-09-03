@@ -182,7 +182,11 @@ function draw(){
         var score = 0;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("TreeHP:"+hp,30,45);
+        ctx.fillText("Score:"+score,30,45);
+        var money = 0;
+        ctx.font = "24px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("Money:"+money,15,30);
 
 }
 
