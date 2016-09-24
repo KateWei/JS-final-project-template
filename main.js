@@ -205,7 +205,7 @@ function draw(){
         	clearINterval(intervalID);
         	ctx.font = "60px Arial";
         	ctx.fillText("~!GAME OVER!~"15,90);
-        }
+        };
 }
 
 // 等待一秒再執行 draw
