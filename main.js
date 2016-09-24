@@ -117,28 +117,7 @@ $("#game").click(function(event){
 	}
 });
 
-function tower = {
-        	this.x = 0,
-	        this.y = 0,
-        	this.range = 96,
-        	this.aimingEnemyId = null,
-        	this.fireRate = 1,
-        	this.readyToShootTime = 1,
-        	this.damage = 5,
-        	this.shoot = function hit(id){
-        		ct.beginPath();
-        		ctx.moveTo(this.x + 16, this.y);
-        		ctx.lineTo(enemies[id].x + 16, enemies[id].y + 16);
-        		ctx.strokeStyle = "red";
-        		ctx.lineWidth = 3;
-        		ctx.stroke();
-        	        enemies[id].HP -= this.damage;
-        	}
-                this.searchEnemy = function(){
-                	this.readyToShootTime -= 1/FPS;
-                	for(var i = 0; i<enemies.length; i++){
-                		var distance = Math.sqrt(
-        				Math.pow(this.x-enemies[1].x,2) + Math.pow(this.y-enemies[1].y,2));
+,2) + Math.pow(this.y-enemies[1].y,2));
         				
 		        	        if(distance <= this.range){
 		        	        	this.aimingEnemyId = i;
@@ -147,12 +126,46 @@ function tower = {
 		        	        		this.shoot();
 		        	        		this.readyToShootTime = this.fireRate;
 		        	        	};
-		        	        	return;
-                		}
-                     	}
-          }  
-          //如果都沒找到，會進道這行，清除鎖定的目標
-         this.imingEnemyId = null;
+		        	        	return;function tower = {
+        	this.x = 0,
+	        this.y = 0,
+        	this.range = 96,
+        	this.aimingEnemyId = null,
+   
+function Tower(){
+	this.x = 0;
+	this.y = 0;
+	this.range = 96;
+	this.aimingEnemyId = null;
+	this.fireRate = 1;
+	this.readyToShootTime = 1;
+	this.damage = 100;
+	this.shoot = function(id){
+		ctx.beginPath();
+		ctx.moveTo(this.x + 16, this.y);
+		ctx.lineTo(enemies[id].x + 16, enemies[id].y + 16);
+		ctx.strokeStyle = 'red';
+		ctx.lineWidth = 3;
+		ctx.stroke();
+		enemies[id].HP -= this.damage;
+	};
+	this.searchEnemy = function(){
+	for(var i=0; i<enemies.length; i++){
+		this.readyToShootTime -= 1/FPS;
+		var distance = Math.sqrt( 
+		Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2) 
+		);
+		if (distance<=this.range) {
+			this.aimingEnemyId = i;
+			if(this.readyToShootTime <= 0){
+				this.shoot(i);
+				this.readyToShootTime = this.fireRate;
+			}
+			return;
+		}
+	}
+		// 如果都沒找到，會進到這行，清除鎖定的目標
+		this.aimingEnemyId = null;
 	};
 
 function draw(){
