@@ -108,22 +108,33 @@ $("#game").click(function(event){
 	}
 	else{
 		if(isBuilding == true){
+			var tower = new tower();
 			tower.x = cursor.x - cursor.x % 32;
 			tower.y = cursor.y - cursor.y % 32;
+			towers.push(tower);
 		}
 		isBuilding = false;
 	}
 });
 
-var tower = {
-        	x:0,
-	        y:0,
-        	range: 96,
-        	aimingEnemyId: null,
-        	fireRate: 1,
-        	readyToShootTime: 1,
-        	damage: 5,
-                searchEnemy: function(){
+function tower = {
+        	this.x = 0,
+	        this.y = 0,
+        	this.range = 96,
+        	this.aimingEnemyId = null,
+        	this.fireRate = 1,
+        	this.readyToShootTime = 1,
+        	this.damage = 5,
+        	this.shoot = function hit(id){
+        		ct.beginPath();
+        		ctx.moveTo(this.x + 16, this.y);
+        		ctx.lineTo(enemies[id].x + 16, enemies[id].y + 16);
+        		ctx.strokeStyle = "red";
+        		ctx.lineWidth = 3;
+        		ctx.stroke();
+        	        enemies[id].HP -= this.damage;
+        	}
+                this.searchEnemy = function(){
                 	this.readyToShootTime -= 1/FPS;
                 	for(var i = 0; i<enemies.length; i++){
                 		var distance = Math.sqrt(
@@ -137,20 +148,11 @@ var tower = {
 		        	        		this.readyToShootTime = this.fireRate;
 		        	        	};
 		        	        	return;
-		        	//如果都沒找到，會進道這行，清除鎖定的目標
-		        	this.imingEnemyId = null;
                 		}
                      	}
-        	shoot: function hit(id){
-        		ct.beginPath();
-        		ctx.moveTo(this.x + 16, this.y);
-        		ctx.lineTo(enemies[id].x + 16, enemies[id].y + 16);
-        		ctx.strokeStyle = "red";
-        		ctx.lineWidth = 3;
-        		ctx.stroke();
-        	        enemies[id].HP -= this.damage;
-        	}
-          }
+          }  
+          //如果都沒找到，會進道這行，清除鎖定的目標
+         this.imingEnemyId = null;
 	};
 
 function draw(){
@@ -166,7 +168,7 @@ function draw(){
 		ctx.drawImage(towerImg,cursor.x,cursor.y);
 	}
 	else{
-		ctx.drawImage(towerImg,tower.x,tower.y);
+		ctx.drawImage(towerImg,towers[i].x,towers[i].y);
 	}
 	for(var i = 0; i < enemies.length; i++){
             if(enemies[i].hp <= 0){
