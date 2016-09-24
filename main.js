@@ -190,10 +190,10 @@ function draw(){
 		}
 	}
 	clock++;
-	var TreeHp = 100;
+	var treeHp = 100;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
-        ctx.fillText("TreeHP:"+TreeHp,15,30);
+        ctx.fillText("TreeHP:"+treeHp,15,30);
 	var score = 0;
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
