@@ -204,8 +204,8 @@ function draw(){
         if(treeHP <= 0){
         	clearINterval(intervalID);
         	ctx.font = "60px Arial";
-        	ctx.fillText("~!GAME OVER!~"15,90);
-        };
+        	ctx.fillText("GAME OVER"15,90);
+        }
 }
 
 // 等待一秒再執行 draw
