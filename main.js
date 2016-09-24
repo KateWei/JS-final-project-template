@@ -202,7 +202,7 @@ function draw(){
         ctx.fillStyle = "white";
         ctx.fillText("Money:"+money,15,90);
         if(treeHP <= 0){
-        	clearI	interval(intervalID);
+        	clearInterval(intervalID);
         	ctx.font = "60px Arial";
         	ctx.fillText("GAME OVER"15,90);
         }
