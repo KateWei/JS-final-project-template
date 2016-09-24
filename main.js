@@ -201,11 +201,6 @@ function draw(){
         ctx.font = "24px Arial";
         ctx.fillStyle = "white";
         ctx.fillText("Money:"+money,15,90);
-        if(treeHP <= 0){
-        	clearInterval(intervalID);
-        	ctx.font = "60px Arial";
-        	ctx.fillText("GAME OVER"15,90);
-        }
 }
 
 // 等待一秒再執行 draw
