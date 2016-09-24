@@ -167,8 +167,13 @@ function draw(){
 	if(isBuilding == true){
 		ctx.drawImage(towerImg,cursor.x,cursor.y);
 	}
-	else{
+	for(var i = 0; i < enemies.length; i++){
 		ctx.drawImage(towerImg,towers[i].x,towers[i].y);
+		towers[i].searchEnemy();
+		if(towers[i].aimingEnemyId != null){
+			var id = towers[i].aimingEnemyId;
+			ctx.drawImage(crosshairImg, enemies[id].x, enemies[id].y);
+		}
 	}
 	for(var i = 0; i < enemies.length; i++){
             if(enemies[i].hp <= 0){
