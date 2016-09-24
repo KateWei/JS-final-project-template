@@ -189,9 +189,19 @@ function draw(){
 			ctx.drawImage(enemyImg,enemies[i].x,enemies[i].y);
 		}
 	}
-	ctx.fillText("HP: "+ treeHP, 0, 32);
-	
 	clock++;
+	var hp = 100;
+        ctx.font = "24px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("TreeHP:"+hp,15,30);
+	var score = 0;
+        ctx.font = "24px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("Score:"+score,15,60);
+        var money = 0;
+        ctx.font = "24px Arial";
+        ctx.fillStyle = "white";
+        ctx.fillText("Money:"+money,15,90);
 }
 
 // 等待一秒再執行 draw
