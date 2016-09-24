@@ -207,3 +207,4 @@ function draw(){
 // 等待一秒再執行 draw
 setInterval( draw, 1000/FPS);
 var setIntervalID = setInterval(function(){},3000);
+setInterval(intervallID);
